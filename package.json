@@ -6,15 +6,20 @@
   "scripts": {
     "watch": "watch-run -i -p 'dist/*' 'npm run-script challenges'",
     "challenges": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register src/test/**/*.ts",
+    "watch-test": "watch-run -i -p 'dist/**/*.js' 'mocha -r ts-node/register src/test/**/*.ts'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ts-node": "^4.1.0",
     "typescript": "^2.6.2"
   },
   "devDependencies": {
-    "@types/node": "^8.5.2"
+    "@types/chai": "^4.0.10",
+    "@types/mocha": "^2.2.45",
+    "@types/node": "^8.5.2",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "ts-node": "^4.1.0"
   }
 }
