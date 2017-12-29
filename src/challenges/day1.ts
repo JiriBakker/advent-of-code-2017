@@ -1,8 +1,6 @@
 import { Challenge } from '../util/challenge'
 
 export class Day1 implements Challenge {
-    public dayNumber = 1;
-
     public a(input: string[]): number {
         const digits = input[0].split('');
         let sum = 0;
