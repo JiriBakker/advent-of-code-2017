@@ -36,7 +36,7 @@ describe('Day 3', () => {
         expect(challenge.b(["748"])).to.equal(806);
     });
 
-    it('a(806)', () => {
+    it('b(806)', () => {
         expect(challenge.b(["806"])).to.equal(806);
     });
     
