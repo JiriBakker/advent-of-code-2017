@@ -5,7 +5,7 @@ export { Day4 } from "./day4";
 export { Day5 } from "./day5";
 export { Day6 } from "./day6";
 export { Day7 } from "./day7";
-// export { Day8 } from "./day8";
+export { Day8 } from "./day8";
 // export { Day9 } from "./day9";
 // export { Day10 } from "./day10";
 // export { Day11 } from "./day11";
