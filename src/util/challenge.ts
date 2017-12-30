@@ -1,4 +1,4 @@
 export interface Challenge {
-    a(input: string[]): number;
-    b(input: string[]): number;
+    a(input: string[]): any;
+    b(input: string[]): any;
 }
