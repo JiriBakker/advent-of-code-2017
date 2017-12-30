@@ -109,6 +109,13 @@ export class Day8 implements Challenge {
         return new Instruction(registerForOperation, operation, condition);
     }
 
+    private static executeInstructions(input: string[]) {
+        const registers = {};
+        input.map(line => Day8.parseInstruction(line, registers))
+             .forEach(instruction => instruction.execute());
+        return registers;
+    }
+
     private static findMaxValue(registers: any, getValue: (register: Register) => number) {
         let max = Number.MIN_VALUE;
         for (let registerKey in registers) {
@@ -122,18 +129,12 @@ export class Day8 implements Challenge {
     }
 
     public a(input: string[]): number {
-        const registers = {};
-        const instructions = input.map(line => Day8.parseInstruction(line, registers))
-                                  .forEach(instruction => instruction.execute());
-        
+        const registers = Day8.executeInstructions(input);
         return Day8.findMaxValue(registers, (register) => register.getValue());
     }
 
     public b(input: string[]): number {
-        const registers = {};
-        const instructions = input.map(line => Day8.parseInstruction(line, registers))
-                                  .forEach(instruction => instruction.execute());
-        
+        const registers = Day8.executeInstructions(input);
         return Day8.findMaxValue(registers, (register) => register.getMaxValue());
     }
 
