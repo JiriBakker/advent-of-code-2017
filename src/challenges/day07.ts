@@ -19,7 +19,7 @@ class Subtree {
     public parent: Subtree;
 }
 
-export class Day7 implements Challenge {
+export class Day07 implements Challenge {
 
     private static parseSubtrees(input: string[]): string[][] {
         const parseSubtree = line => 
@@ -37,7 +37,7 @@ export class Day7 implements Challenge {
     }  
 
     private static constructSubtrees(input: string[]): string {
-        const parsedSubtrees = Day7.parseSubtrees(input);
+        const parsedSubtrees = Day07.parseSubtrees(input);
         
         const constructSubtree = (subtrees: any, subtreeName: string) => {
             if (subtreeName in subtrees) {
@@ -75,12 +75,12 @@ export class Day7 implements Challenge {
     }
 
     public a(input: string[]): string {
-        return Day7.findRoot(Day7.constructSubtrees(input));
+        return Day07.findRoot(Day07.constructSubtrees(input));
     }
 
     public b(input: string[]): string {
-        const subtrees = Day7.constructSubtrees(input);
-        const root = subtrees[Day7.findRoot(subtrees)];
+        const subtrees = Day07.constructSubtrees(input);
+        const root = subtrees[Day07.findRoot(subtrees)];
 
         const findUnbalancedWeight = (subtree: Subtree) => {
             if (subtree.children.length == 0) {

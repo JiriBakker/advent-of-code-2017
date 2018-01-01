@@ -1,6 +1,6 @@
 import { Challenge } from '../util/challenge'
 
-export class Day9 implements Challenge {
+export class Day09 implements Challenge {
 
     private static count(stream: string): any {
         let depth = 0;
@@ -34,11 +34,11 @@ export class Day9 implements Challenge {
     }
 
     public a(input: string[]): number {
-        return Day9.count(input[0]).groupSum;
+        return Day09.count(input[0]).groupSum;
     }
 
     public b(input: string[]): number {
-        return Day9.count(input[0]).garbageCount;
+        return Day09.count(input[0]).garbageCount;
     }
 
 }

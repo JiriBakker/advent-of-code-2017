@@ -4,23 +4,37 @@ import { expect } from 'chai';
 describe('Day 11', () => {
     const challenge = new Day11();
 
-    // it('a(...)', () => {
-    //     expect(challenge.a([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -10 if a >= 1",
-    //         "c inc -20 if c == 10"
-    //     ])).to.equal(1);
-    // });
+    it('a([ne,ne,ne])', () => {
+        expect(challenge.a(["ne,ne,ne"])).to.equal(3);
+    });
 
-    // it('b(...)', () => {
-    //     expect(challenge.b([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -10 if a >= 1",
-    //         "c inc -20 if c == 10"
-    //     ])).to.equal(10);
-    // });
+    it('a([ne,ne,sw,sw])', () => {
+        expect(challenge.a(["ne,ne,sw,sw"])).to.equal(0);
+    });
+
+    it('a([ne,ne,s,s])', () => {
+        expect(challenge.a(["ne,ne,s,s"])).to.equal(2);
+    });
+
+    it('a([se,sw,se,sw,sw])', () => {
+        expect(challenge.b(["se,sw,se,sw,sw"])).to.equal(3);
+    });
+
+    it('b([ne,ne,ne])', () => {
+        expect(challenge.b(["ne,ne,ne"])).to.equal(3);
+    });
+
+    it('b([ne,ne,sw,sw])', () => {
+        expect(challenge.b(["ne,ne,sw,sw"])).to.equal(2);
+    });
+
+    it('b([ne,ne,s,s])', () => {
+        expect(challenge.b(["ne,ne,s,s"])).to.equal(2);
+    });
+
+    it('b([se,sw,se,sw,sw])', () => {
+        expect(challenge.b(["se,sw,se,sw,sw"])).to.equal(3);
+    });
     
 });
 

@@ -1,8 +1,8 @@
-import { Day7 } from '../challenges/day7';
+import { Day07 } from '../challenges/day07';
 import { expect } from 'chai';
 
-describe('Day 7', () => {
-    const challenge = new Day7();
+describe('Day 07', () => {
+    const challenge = new Day07();
 
     it('a(...)', () => {
         expect(challenge.a([

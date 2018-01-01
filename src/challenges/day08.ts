@@ -91,7 +91,7 @@ class Condition {
     }
 }
 
-export class Day8 implements Challenge {
+export class Day08 implements Challenge {
 
     private static getRegister(registerKey: string, registers: any): Register {
         if (!(registerKey in registers)) {
@@ -102,16 +102,16 @@ export class Day8 implements Challenge {
 
     private static parseInstruction(line: string, registers: any) : Instruction {
         const instructionParts = line.split(" ");
-        const registerForOperation = Day8.getRegister(instructionParts[0], registers);
+        const registerForOperation = Day08.getRegister(instructionParts[0], registers);
         const operation = new Operation(instructionParts[1], parseInt(instructionParts[2]));
-        const registerForCondition = Day8.getRegister(instructionParts[4], registers);
+        const registerForCondition = Day08.getRegister(instructionParts[4], registers);
         const condition = new Condition(registerForCondition, instructionParts[5], parseInt(instructionParts[6]));
         return new Instruction(registerForOperation, operation, condition);
     }
 
     private static executeInstructions(input: string[]) {
         const registers = {};
-        input.map(line => Day8.parseInstruction(line, registers))
+        input.map(line => Day08.parseInstruction(line, registers))
              .forEach(instruction => instruction.execute());
         return registers;
     }
@@ -129,13 +129,13 @@ export class Day8 implements Challenge {
     }
 
     public a(input: string[]): number {
-        const registers = Day8.executeInstructions(input);
-        return Day8.findMaxValue(registers, (register) => register.getValue());
+        const registers = Day08.executeInstructions(input);
+        return Day08.findMaxValue(registers, (register) => register.getValue());
     }
 
     public b(input: string[]): number {
-        const registers = Day8.executeInstructions(input);
-        return Day8.findMaxValue(registers, (register) => register.getMaxValue());
+        const registers = Day08.executeInstructions(input);
+        return Day08.findMaxValue(registers, (register) => register.getMaxValue());
     }
 
 }

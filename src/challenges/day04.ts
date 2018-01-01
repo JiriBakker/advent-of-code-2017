@@ -1,6 +1,6 @@
 import { Challenge } from '../util/challenge'
 
-export class Day4 implements Challenge {
+export class Day04 implements Challenge {
     private hasNoDuplicateWords(words: string[]) {
         const wordsFound = {}
         for (let i = 0; i < words.length; i++) {

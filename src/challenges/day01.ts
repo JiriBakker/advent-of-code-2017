@@ -1,6 +1,6 @@
 import { Challenge } from '../util/challenge'
 
-export class Day1 implements Challenge {
+export class Day01 implements Challenge {
     public a(input: string[]): number {
         const digits = input[0].split('');
         let sum = 0;

@@ -37,7 +37,7 @@ enum Direction {
     DOWN
 }
 
-export class Day3 implements Challenge {
+export class Day03 implements Challenge {
     
     public a(input: string[]): number {
         const nr = parseInt(input[0]);

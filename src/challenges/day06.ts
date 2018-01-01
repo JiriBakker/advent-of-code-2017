@@ -1,6 +1,6 @@
 import { Challenge } from '../util/challenge'
 
-export class Day6 implements Challenge {
+export class Day06 implements Challenge {
 
     private static findMaxIndex(banks: number[]) {
         let maxValue = 0;
@@ -35,10 +35,10 @@ export class Day6 implements Challenge {
         const visitedBankStates = {};
 
         let stepCounter = 0;
-        while (!(Day6.getBankStateKey(banks) in visitedBankStates)) {
-            visitedBankStates[Day6.getBankStateKey(banks)] = true;
-            const maxIndex = Day6.findMaxIndex(banks);
-            banks = Day6.redistribute(banks, maxIndex);
+        while (!(Day06.getBankStateKey(banks) in visitedBankStates)) {
+            visitedBankStates[Day06.getBankStateKey(banks)] = true;
+            const maxIndex = Day06.findMaxIndex(banks);
+            banks = Day06.redistribute(banks, maxIndex);
             stepCounter++;
         }
 
@@ -50,13 +50,13 @@ export class Day6 implements Challenge {
         const visitedBankStates = {};
 
         let stepCounter = 0;
-        while (!(Day6.getBankStateKey(banks) in visitedBankStates)) {
-            visitedBankStates[Day6.getBankStateKey(banks)] = stepCounter;
-            const maxIndex = Day6.findMaxIndex(banks);
-            banks = Day6.redistribute(banks, maxIndex);
+        while (!(Day06.getBankStateKey(banks) in visitedBankStates)) {
+            visitedBankStates[Day06.getBankStateKey(banks)] = stepCounter;
+            const maxIndex = Day06.findMaxIndex(banks);
+            banks = Day06.redistribute(banks, maxIndex);
             stepCounter++;
         }
 
-        return stepCounter - visitedBankStates[Day6.getBankStateKey(banks)];
+        return stepCounter - visitedBankStates[Day06.getBankStateKey(banks)];
     }
 }

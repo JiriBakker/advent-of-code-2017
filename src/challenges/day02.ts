@@ -1,6 +1,6 @@
 import { Challenge } from '../util/challenge'
 
-export class Day2 implements Challenge {
+export class Day02 implements Challenge {
     private static parseSheet(input: string[]): number[][] {
         let isDigit = (char) => !isNaN(parseInt(char));
         return input.map((row) => {
@@ -27,7 +27,7 @@ export class Day2 implements Challenge {
     }
 
     public a(input: string[]): number {
-        const sheet = Day2.parseSheet(input);
+        const sheet = Day02.parseSheet(input);
         let sum = 0;
         sheet.forEach((numbers) => {
             let min = Number.MAX_VALUE;
@@ -41,7 +41,7 @@ export class Day2 implements Challenge {
         return sum;
     }
     public b(input: string[]): number {
-        const sheet = Day2.parseSheet(input);
+        const sheet = Day02.parseSheet(input);
         let sum = 0;
         sheet.forEach((numbers) => {
             for (let i = 0; i < numbers.length; i++) {

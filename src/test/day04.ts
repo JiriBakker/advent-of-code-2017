@@ -1,8 +1,8 @@
-import { Day4 } from '../challenges/day4';
+import { Day04 } from '../challenges/day04';
 import { expect } from 'chai';
 
-describe('Day 4', () => {
-    const challenge = new Day4();
+describe('Day 04', () => {
+    const challenge = new Day04();
 
     it('a(aa bb cc dd ee)', () => {
         expect(challenge.a(["aa bb cc dd ee"])).to.equal(1);

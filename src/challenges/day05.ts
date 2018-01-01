@@ -1,6 +1,6 @@
 import { Challenge } from '../util/challenge'
 
-export class Day5 implements Challenge {
+export class Day05 implements Challenge {
 
     private static countSteps(input: string[], incrementFunc: (curVal: number) => number) : number {
         const steps = input.map(line => parseInt(line));
@@ -16,10 +16,10 @@ export class Day5 implements Challenge {
     }
 
     public a(input: string[]): number {
-        return Day5.countSteps(input, _ => 1);
+        return Day05.countSteps(input, _ => 1);
     }
 
     public b(input: string[]): number {
-        return Day5.countSteps(input, val => val >= 3 ? -1 : 1);
+        return Day05.countSteps(input, val => val >= 3 ? -1 : 1);
     }
 }
