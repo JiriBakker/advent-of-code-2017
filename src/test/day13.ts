@@ -4,23 +4,23 @@ import { expect } from 'chai';
 describe('Day 13', () => {
     const challenge = new Day13();
 
-    // it('a(...)', () => {
-    //     expect(challenge.a([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -13 if a >= 1",
-    //         "c inc -20 if c == 13"
-    //     ])).to.equal(1);
-    // });
+    it('a(...)', () => {
+        expect(challenge.a([
+            "0: 3",
+            "1: 2",
+            "4: 4",
+            "6: 4"
+        ])).to.equal(24);
+    });
 
-    // it('b(...)', () => {
-    //     expect(challenge.b([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -13 if a >= 1",
-    //         "c inc -20 if c == 13"
-    //     ])).to.equal(13);
-    // });
+    it('b(...)', () => {
+        expect(challenge.b([
+            "0: 3",
+            "1: 2",
+            "4: 4",
+            "6: 4"
+        ])).to.equal(10);
+    });
     
 });
 
