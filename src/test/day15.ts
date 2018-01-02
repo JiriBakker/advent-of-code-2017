@@ -4,22 +4,33 @@ import { expect } from 'chai';
 describe('Day 15', () => {
     const challenge = new Day15();
 
-    // it('a(...)', () => {
-    //     expect(challenge.a([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -15 if a >= 1",
-    //         "c inc -20 if c == 15"
-    //     ])).to.equal(1);
-    // });
+    it('a(65, 8921, 5)', () => {
+        expect(challenge.a([
+            "Generator A starts with 65",
+            "Generator B starts with 8921"
+        ], 5)).to.equal(1);
+    });
 
-    // it('b(...)', () => {
+    it('a(65, 8921, 5)', () => {
+        expect(challenge.b([
+            "Generator A starts with 65",
+            "Generator B starts with 8921"
+        ], 5)).to.equal(0);
+    });
+
+    it('a(65, 8921, 1056)', () => {
+        expect(challenge.b([
+            "Generator A starts with 65",
+            "Generator B starts with 8921"
+        ], 1056)).to.equal(1);
+    });
+
+    // SLOW TEST! (~1000ms)
+    // it('a(65, 8921)', () => {
     //     expect(challenge.b([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -15 if a >= 1",
-    //         "c inc -20 if c == 15"
-    //     ])).to.equal(15);
+    //         "Generator A starts with 65",
+    //         "Generator B starts with 8921"
+    //     ])).to.equal(309);
     // });
     
 });
