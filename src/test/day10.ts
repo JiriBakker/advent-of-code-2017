@@ -20,27 +20,21 @@ describe('Day 10', () => {
         expect(challenge.a(["10"], 10)).to.equal(72);
     });
 
-    it('toHex([64, 7, 255])', () => {
-        expect(Day10.toHex([64, 7, 255])).to.equal("4007ff");
+    it('b([], 256)', () => {
+        expect(challenge.b([""], 256)).to.equal("a2582a3a0e66e6e86e3812dcb672a272");
     });
 
-    // it('a(...)', () => {
-    //     expect(challenge.a([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -10 if a >= 1",
-    //         "c inc -20 if c == 10"
-    //     ])).to.equal(1);
-    // });
+    it('b([AoC 2017], 256)', () => {
+        expect(challenge.b(["AoC 2017"], 256)).to.equal("33efeb34ea91902bb2f59c9920caa6cd");
+    });
 
-    // it('b(...)', () => {
-    //     expect(challenge.b([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -10 if a >= 1",
-    //         "c inc -20 if c == 10"
-    //     ])).to.equal(10);
-    // });
-    
+    it('b([1,2,3], 256)', () => {
+        expect(challenge.b(["1,2,3"], 256)).to.equal("3efbe78a8d82f29979031a4aa0b16a9d");
+    });
+
+    it('b([1,2,4], 256)', () => {
+        expect(challenge.b(["1,2,4"], 256)).to.equal("63960835bcdc130f0b66d7ff4f6a5a8e");
+    });
+
 });
 
