@@ -4,22 +4,31 @@ import { expect } from 'chai';
 describe('Day 18', () => {
     const challenge = new Day18();
 
-    // it('a(...)', () => {
-    //     expect(challenge.a([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -18 if a >= 1",
-    //         "c inc -20 if c == 18"
-    //     ])).to.equal(1);
-    // });
+    it('a(...)', () => {
+        expect(challenge.a([
+            "set a 1",
+            "add a 2",
+            "mul a a",
+            "mod a 5",
+            "snd a",
+            "set a 0",
+            "rcv a",
+            "jgz a -1",
+            "set a 1",
+            "jgz a -2"
+        ])).to.equal(4);
+    });
 
     // it('b(...)', () => {
     //     expect(challenge.b([
-    //         "b inc 5 if a > 1",
-    //         "a inc 1 if b < 5",
-    //         "c dec -18 if a >= 1",
-    //         "c inc -20 if c == 18"
-    //     ])).to.equal(18);
+    //         "snd 1",
+    //         "snd 2",
+    //         "snd p",
+    //         "rcv a",
+    //         "rcv b",
+    //         "rcv c",
+    //         "rcv d"
+    //     ])).to.equal(3);
     // });
     
 });
